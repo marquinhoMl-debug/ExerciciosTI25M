@@ -11,7 +11,7 @@ namespace Exercicios
         static void Main(string[] args)
         {
             ExercicioControl controle = new ExercicioControl();//Acessando a control
-            controle.Coletar();
+            controle.ExecutarMenu();
         }//fim do método Main
     }//classe
 }//fim o projeto

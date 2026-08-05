@@ -11,6 +11,8 @@ namespace Exercicios
         //Área para declaração de variáveis globais
         private int num1;
         private int num2;
+        private double num3;
+        private double num4;
         private int resultado;
 
         //Método Construtor: Instância as variáveis na memória
@@ -26,6 +28,12 @@ namespace Exercicios
             SetNum1(num1);
             SetNum2(num2);
             SetResultado(0);
+        }//fim do construtor
+
+        public ExercicioModel(double num1, double num2)
+        {
+            SetNum3(num1);
+            SetNum4(num2);
         }//fim do construtor
 
         //Métodos GETS E SETS
@@ -61,6 +69,26 @@ namespace Exercicios
             this.resultado = resultado;
         }//fim do método setResultado
 
+        public double GetNum3()
+        {
+            return this.num3;
+        }//fim do GetNum3
+
+        public void SetNum3(double num3)
+        {
+            this.num3 = num3;
+        }//fim do setNum3
+
+        public double GetNum4()
+        {
+            return this.num4;
+        }//fim do GetNum4
+
+        public void SetNum4(double num4)
+        {
+            this.num4 = num4;
+        }//fim do SetNum4
+
         public int Somar()
         {
             return this.num1 + this.num2;
@@ -80,7 +108,11 @@ namespace Exercicios
 
         public double Dividir()
         {
-            if(GetNum2() <= 0)
+            if(GetNum2() < 0)
+            {
+                return -2;
+            }
+            else if(GetNum2() == 0)
             {
                 return -1;
             }
@@ -91,7 +123,30 @@ namespace Exercicios
             }//fim do if
         }//fim do dividir
 
+        public double Potencia(double bas, double expoente)
+        {
+            return Math.Pow(bas, expoente);
+        }//fim da potencia
 
+        public double Raiz(double num)
+        {
+            return Math.Sqrt(num);
+        }//fim da Raiz
+
+        public double Potencia()
+        {
+            return Math.Pow(GetNum3(), GetNum4());
+        }//fim do potencia sem parâmetros
+
+        public double RaizNum3()
+        {
+            return Math.Sqrt(GetNum3());
+        }//fim do raiz
+
+        public double RaizNum4()
+        {
+            return Math.Sqrt(GetNum4());
+        }//fim do raiz num 4
 
     }//fim da classe
 }//fim do projeto
