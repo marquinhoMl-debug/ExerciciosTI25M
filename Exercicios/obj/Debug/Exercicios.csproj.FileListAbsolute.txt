@@ -6,3 +6,11 @@ C:\Users\allan.ssilva4\source\repos\Exercicios\Exercicios\obj\Debug\Exercicios.c
 C:\Users\allan.ssilva4\source\repos\Exercicios\Exercicios\obj\Debug\Exercicios.exe
 C:\Users\allan.ssilva4\source\repos\Exercicios\Exercicios\obj\Debug\Exercicios.pdb
 C:\Users\allan.ssilva4\source\repos\Exercicios\Exercicios\obj\Debug\Exercicios.exe.config
+C:\Users\marco.abarbosa4\source\repos\ExerciciosTI25M\Exercicios\bin\Debug\Exercicios.exe.config
+C:\Users\marco.abarbosa4\source\repos\ExerciciosTI25M\Exercicios\bin\Debug\Exercicios.exe
+C:\Users\marco.abarbosa4\source\repos\ExerciciosTI25M\Exercicios\bin\Debug\Exercicios.pdb
+C:\Users\marco.abarbosa4\source\repos\ExerciciosTI25M\Exercicios\obj\Debug\Exercicios.csproj.AssemblyReference.cache
+C:\Users\marco.abarbosa4\source\repos\ExerciciosTI25M\Exercicios\obj\Debug\Exercicios.exe.config
+C:\Users\marco.abarbosa4\source\repos\ExerciciosTI25M\Exercicios\obj\Debug\Exercicios.csproj.CoreCompileInputs.cache
+C:\Users\marco.abarbosa4\source\repos\ExerciciosTI25M\Exercicios\obj\Debug\Exercicios.exe
+C:\Users\marco.abarbosa4\source\repos\ExerciciosTI25M\Exercicios\obj\Debug\Exercicios.pdb

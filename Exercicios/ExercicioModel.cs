@@ -1,152 +1,340 @@
 ﻿using System;
+
 using System.Collections.Generic;
+using System.Diagnostics.Eventing.Reader;
 using System.Linq;
+
+using System.Runtime.Remoting.Messaging;
+
 using System.Text;
+
 using System.Threading.Tasks;
 
 namespace Exercicios
+
 {
-    class ExercicioModel
+
+    class Exercicio_model
+
     {
+
         //Área para declaração de variáveis globais
+
         private int num1;
+
         private int num2;
+
         private double num3;
+
         private double num4;
+
+        private int num5;
+
+        private double lado1;
+
+        private double lado2;
+
+        private double lado3;
+
         private int resultado;
 
         //Método Construtor: Instância as variáveis na memória
-        public ExercicioModel()
+
+        public Exercicio_model()
+
         {
-            SetNum1(0);
-            SetNum2(0);
+
+            Setnum1(0);
+
+            Setnum2(0);
+
             SetResultado(0);
+
         }//fim do método construtor
 
-        public ExercicioModel(int num1, int num2)
+        public Exercicio_model(int num1, int num2)
+
         {
-            SetNum1(num1);
-            SetNum2(num2);
+
+            Setnum1(num1);
+
+            Setnum2(num2);
+
             SetResultado(0);
+
         }//fim do construtor
 
-        public ExercicioModel(double num1, double num2)
+        public Exercicio_model(double num3, double num4)
+
         {
-            SetNum3(num1);
-            SetNum4(num2);
-        }//fim do construtor
 
-        //Métodos GETS E SETS
-        //GET = Pegar, Obter, Consultar
+            Setnum3(num3);
+
+            Setnum4(num4);
+
+        }//fim do Getnum
+
+        //métodos GETS e SETS
+
+        //GET = Pegar, obter, Consultar
+
         //SET = Alterar, Modificar, Configurar
-        public int GetNum1()
+
+        public int Getnum1()
+
         {
+
             return this.num1;
+
         }//fim do getNum1
 
-        public void SetNum1(int num1)
+        public void Setnum1(int num1)
+
         {
+
             this.num1 = num1;
+
         }//fim do setNum1
 
-        public int GetNum2()
+        public int Getnum2()
+
         {
+
             return this.num2;
+
         }//fim do getNum2
 
-        public void SetNum2(int num2)
+        public void Setnum2(int num2)
+
         {
+
             this.num2 = num2;
+
         }//fim do setNum2
 
         public int GetResultado()
+
         {
+
             return this.resultado;
-        }//fim do método
+
+        }//fim do método resultado
+
+        public double Getnum3()
+
+        {
+
+            return this.num3;
+
+        }//fim do getnum3
+
+        public void Setnum3(double num3)
+
+        {
+
+            this.num3 = num3;
+
+        }//fim do Setnum3
+
+        public double Getnum4()
+
+        {
+
+            return this.num4;
+
+        }//fim do Getnum 4
+
+        public void Setnum4(double num4)
+
+        {
+
+            this.num4 = num4;
+
+        }//fim do Setnum4
 
         public void SetResultado(int resultado)
+
         {
+
             this.resultado = resultado;
-        }//fim do método setResultado
 
-        public double GetNum3()
-        {
-            return this.num3;
-        }//fim do GetNum3
+        }//fim do método resultado
 
-        public void SetNum3(double num3)
-        {
-            this.num3 = num3;
-        }//fim do setNum3
+        public int Soma()
 
-        public double GetNum4()
         {
-            return this.num4;
-        }//fim do GetNum4
 
-        public void SetNum4(double num4)
-        {
-            this.num4 = num4;
-        }//fim do SetNum4
-
-        public int Somar()
-        {
             return this.num1 + this.num2;
+
         }//fim do método somar
 
         public int Subtrair()
+
         {
-            SetResultado(GetNum1() - GetNum2());
+
+            SetResultado(Getnum1() - Getnum2());
+
             return GetResultado();
-        }//fim do método subtrair
+
+        }//fim do método Subtrair
 
         public int Multiplicar()
+
         {
-            SetResultado(GetNum1() * GetNum2());
-            return GetResultado(); 
-        }//fim do multiplicar
+
+            SetResultado(Getnum1() * Getnum2());
+
+            return GetResultado();
+
+        }//fim do método multiplicar
 
         public double Dividir()
-        {
-            if(GetNum2() < 0)
-            {
-                return -2;
-            }
-            else if(GetNum2() == 0)
-            {
-                return -1;
-            }
-            else
-            {
-                SetResultado(GetNum1() / GetNum2());
-                return GetResultado();
-            }//fim do if
-        }//fim do dividir
 
-        public double Potencia(double bas, double expoente)
         {
+
+            if (Getnum2() == 0)
+
+            {
+
+                return -1;
+
+            }
+
+            else
+
+            {
+
+                SetResultado(Getnum1() / Getnum2());
+
+                return GetResultado();
+
+            }//fim do if
+
+        }//fim do método dividir
+
+        public double Potencial(double bas, double expoente)
+
+        {
+
             return Math.Pow(bas, expoente);
+
         }//fim da potencia
 
         public double Raiz(double num)
+
         {
+
             return Math.Sqrt(num);
-        }//fim da Raiz
+
+        }//fim da raiz
 
         public double Potencia()
-        {
-            return Math.Pow(GetNum3(), GetNum4());
-        }//fim do potencia sem parâmetros
 
-        public double RaizNum3()
         {
-            return Math.Sqrt(GetNum3());
-        }//fim do raiz
 
-        public double RaizNum4()
+            return Math.Pow(Getnum3(), Getnum4());
+
+        }//fim da potência sem parâmetro
+
+        public double Potencia(double bas, double expoente)
+
         {
-            return Math.Sqrt(GetNum4());
-        }//fim do raiz num 4
+
+            return Math.Pow(bas, expoente);
+
+        }//fim da potência sem parâmetro
+
+
+        public double Raiznum3()
+
+        {
+
+            return Raiz(Getnum3());
+
+        }//fim da Raiz
+
+        public double Raiznum4()
+
+        {
+
+            return Raiz(Getnum4());
+
+        }//fim da Raiz
+
+        public string Exercicio01(int ano)
+
+        {
+
+            if (ano % 4 == 0)
+
+            {
+
+                return ano + " o ano é bissexto";
+
+            }
+
+            else
+
+            {
+
+                return ano + " não é bissexto";
+
+            }
+
+        }
+
+        public string Exercicio02(int num5)
+        {
+            if (num5 >= 100 && num5 <= 200)
+            {
+                return num5 + " Este número está entre 100 e 200. ";
+            }
+            else
+            {
+                return num5 + " Este número está entre 100 e 200. ";
+            }
+
+        } public string Exercicio03(int num6)
+        {
+            if (num6 < 16)
+            {
+                return num6 + " você não tem idade para votar. ";
+            }
+            else if ((num6 >= 16 && num6 < 18) || num6 >= 70)
+            {
+                return num6 + " Voto facultativo.";
+            }
+            else
+            {
+                return num6 + " Você pode votar.";
+            }
+        }//fim Exercicio03
+
+        public string Exercicio04(int num7)
+        {
+            if ((num7 >= 10 && num7 <= 18))
+            {
+                return num7 + " O número está dentro do intervalo. ";
+            }
+            else
+            {
+                return num7 + " O número não está dentro do intervalo";
+            }
+        }//fim Exercicio04
+
+        pubic string Exercicio06(double lado1, double lado2, double lado3)
+         {
+            if (lado1 + lado2 >  lado3 && lado1 + lado3 > lado2 && lade2 + lado3 > lado1)
+        }
+
+
+
+
+
+
+
 
     }//fim da classe
+
 }//fim do projeto
+
