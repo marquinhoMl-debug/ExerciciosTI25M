@@ -71,9 +71,12 @@ namespace Exercicios
                               "11.Exercicio03\n" +
                               "12.Exercicio04\n" +
                               "13.Exercicio05\n" +
-                              "14.Exercicio06");
-
-            SetOpcao(Convert.ToInt32(Console.ReadLine()));
+                              "14.Exercicio06\n" +
+                              "15.Exercicio07\n" +
+                              "16.Exercicio08\n" +
+                              "17.Exercicio09\n" +
+                              "18.Exercicio10\n");
+                                         SetOpcao(Convert.ToInt32(Console.ReadLine()));
         }//fim do menu
 
         //Executar o menu
@@ -167,6 +170,93 @@ namespace Exercicios
                         int num7 = Convert.ToInt32(Console.ReadLine());
                         Console.WriteLine(this.modelo.Exercicio04(num7));
                         break;
+                    case 13:
+                            Console.Write("Informe o primeiro número: ");
+                            int n1 = Convert.ToInt32(Console.ReadLine());
+
+                            Console.Write("Informe o segundo número: ");
+                            int n2 = Convert.ToInt32(Console.ReadLine());
+
+                            Console.Write("Informe o terceiro número: ");
+                            int n3 = Convert.ToInt32(Console.ReadLine());
+
+                            Console.Write("Informe o quarto número: ");
+                            int n4 = Convert.ToInt32(Console.ReadLine());
+
+                            Console.Write("Informe o quinto número: ");
+                            int n5 = Convert.ToInt32(Console.ReadLine());
+
+                            Console.Write("Informe o sexto número: ");
+                            int n6 = Convert.ToInt32(Console.ReadLine());
+
+                            Console.Write("Informe o sétimo número: ");
+                            int n7 = Convert.ToInt32(Console.ReadLine());
+
+                            Console.Write("Informe o oitavo número: ");
+                            int n8 = Convert.ToInt32(Console.ReadLine());
+
+                            Console.Write("Informe o nono número: ");
+                            int n9 = Convert.ToInt32(Console.ReadLine());
+
+                            Console.Write("Informe o décimo número: ");
+                            int n10 = Convert.ToInt32(Console.ReadLine());
+
+                            Console.Write("Informe o número que deseja verificar: ");
+                            int numeroLido = Convert.ToInt32(Console.ReadLine());
+                            Console.WriteLine(this.modelo.Exercicio05(n1, n2, n3, n4, n5, n6, n7, n8, n9, n10, numeroLido));
+                            break;
+                        case 14:
+                        Console.WriteLine("Informe o primeiro lado: ");
+                        int lado1 = Convert.ToInt32(Console.ReadLine());
+
+                        Console.WriteLine("Informe o segundo lado: ");
+                        int lado2 = Convert.ToInt32(Console.ReadLine());
+
+                        Console.WriteLine("Informe o terceiro lado: ");
+                        int lado3 = Convert.ToInt32(Console.ReadLine());
+                        //Mostrar triângulo
+                        Console.WriteLine(this.modelo.Exercicio06(lado1, lado2, lado3));
+                        break;
+                    case 15:
+
+                        Console.WriteLine(" Informe um número: ");
+
+                        int num11 = Convert.ToInt32(Console.ReadLine());
+
+                        Console.WriteLine(this.modelo.Exercicio07(num11));
+
+                        break;
+                    case 16:
+                        Console.WriteLine(" Digite a senha de 4 dígitos: ");
+                        int num12 = Convert.ToInt32(Console.ReadLine());
+                        Console.WriteLine(this.modelo.Exercicio08(num12));
+                        break;
+                    case 17:
+                        Console.WriteLine("Informe o primeiro horário (ex: 10:20):");
+                        string[] partes1 = Console.ReadLine().Split(':');
+                        int hora1 = Convert.ToInt32(partes1[0]); // O [0] pega só a hora antes dos dois pontos
+
+                        Console.WriteLine("Informe o segundo horário (ex: 14:30):");
+                        string[] partes2 = Console.ReadLine().Split(':');
+                        int hora2 = Convert.ToInt32(partes2[0]); // O [0] pega só a hora antes dos dois pontos
+
+                        string resultado = this.modelo.Exercicio09(hora1, hora2);
+
+                        Console.WriteLine(resultado);
+                        break;
+                    case 18:
+                        Console.WriteLine(" Informe o primeiro número: ");
+                        int num13 = Convert.ToInt32(Console.ReadLine());
+
+                        Console.WriteLine(" Informe o segundo número: ");
+                        int num14 = Convert.ToInt32(Console.ReadLine());
+
+                        string Resultado = this.modelo.Exercicio10(num13, num14);
+
+
+                        Console.WriteLine(" O maior número é: " + Resultado);
+                        break;
+
                 }//fim da escolha
             } while (GetOpcao() != 0);//fim...while
         }//fim do método executar menu

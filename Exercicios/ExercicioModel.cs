@@ -30,6 +30,28 @@ namespace Exercicios
 
         private int num5;
 
+        private int num6;
+
+        private int num7;
+
+        private int num8;
+
+        private int num9;
+
+        private int num10;
+
+        private int num11;
+
+        private int num12;
+
+        private int num13;
+
+        private int num14;
+
+        private int hora1;
+
+        private int hora2;
+
         private double lado1;
 
         private double lado2;
@@ -322,10 +344,123 @@ namespace Exercicios
             }
         }//fim Exercicio04
 
-        pubic string Exercicio06(double lado1, double lado2, double lado3)
-         {
-            if (lado1 + lado2 >  lado3 && lado1 + lado3 > lado2 && lade2 + lado3 > lado1)
-        }
+        public string Exercicio05(int num1, int num2, int num3, int num4, int num5, int num6, int num7, int num8, int num9, int num10, int numeroLido)
+        {
+            int menor = num1;
+
+            if (num2 < menor) { menor = num2; }
+            if (num3 < menor) { menor = num3; }
+            if (num4 < menor) { menor = num4; }
+            if (num5 < menor) { menor = num5; }
+            if (num6 < menor) { menor = num6; }
+            if (num7 < menor) { menor = num7; }
+            if (num8 < menor) { menor = num8; }
+            if (num9 < menor) { menor = num9; }
+            if (num10 < menor) { menor = num10; }
+
+            if (numeroLido >= menor)
+            {
+                return "O número " + numeroLido + " está entre os 10 maiores valores.";
+            }
+            else
+            {
+                return "O número " + numeroLido + " não está entre os 10 maiores valores.";
+            }
+        }//fim do Exercicio 5
+
+        public string Exercicio06(double lado1, double lado2, double lado3)
+        {
+            if (lado1 == lado2 && lado2 == lado3)
+            {
+                return lado1 + lado2 + lado3 + " este é um triângulo é equilátero";
+            }
+            else if (lado1 != lado2 && lado1 != lado3 && lado2 != lado3)
+            {
+                return lado1 + lado2 + lado2 + " este é um triângulo escaleno.";
+            }
+            else
+            {
+                return " este é um triângulo isósceles.";
+            }
+        }// fim do Exercício 6
+
+        public string Exercicio07(int num11)
+        {
+            if (num11 == 1)
+            {
+                return num11 + " Hoje é Domingo";
+            }
+            else if (num11 == 2)
+            {
+                return num11 + " Hoje é segunda";
+            }
+            else if (num11 == 3)
+            {
+                return num11 + " Hoje é terça";
+            }
+            else if (num11 == 4)
+            {
+                return num11 + " Hoje é quarta";
+            }
+            else if (num11 == 5)
+            {
+                return num11 + " hoje é quarta";
+            }
+            else if (num11 == 6)
+            {
+                return num11 + " hoje é quinta";
+            }
+            else if (num11 == 7)
+            {
+                return num11 + " hoje é quinta";
+            }
+            else
+            {
+                return num11 + " O número digitado não existe";
+            }
+        }//fim Exercicio07
+
+        public string Exercicio08(int num12)
+        {
+            int senhaCorreta = 1234;
+
+            if (num12 == senhaCorreta)
+            {
+                return "Senha válida!";
+            }
+            else
+            {
+                return "Senha inválida!";
+            }
+        }//fim Exercicio08
+
+        public string Exercicio09(int hora1, int hora2)
+        {
+            if (hora1 > hora2)
+            {
+                return " O Srimeiro horário é mais tarde";
+            }
+            else if (hora1 < hora2)
+            {
+                return " O Segundo horário é mais tarde";
+            }
+            else
+            {
+                return " Os horários são iguais";
+            }
+        }//fim Exercicio09
+
+        public string Exercicio10(int num13, int num14)
+        {
+            if (num13 > num14)
+            {
+                return num13.ToString();
+            }
+            else
+            {
+                return num14.ToString();
+            }
+        }//fim Exercicio10
 
 
 
